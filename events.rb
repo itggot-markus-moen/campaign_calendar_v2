@@ -1,9 +1,9 @@
-def lunar_phases(day, month, year)
+def lunar_phases(day, month, year, month_lenght, month_num)
     phases = ["Full Moon", "Waning Gibbous", "Last Quarter", "Waning Crecent", "New Moon", "Waxing Crecent", "First Quarter", "Waxing Gibbous"]
     small_moon_cycle = 30
     medium_moon_cycle = 63
     large_moon_cycle = 84
-    total_days = day + month*30 + year*360
+    total_days = day + month*month_lenght + year*(month_lenght*month_num)
     small_moon_mod = total_days%small_moon_cycle
     medium_moon_mod = total_days%medium_moon_cycle
     large_moon_mod = total_days%large_moon_cycle
